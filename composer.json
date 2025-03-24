@@ -1,5 +1,5 @@
 {
-    "name": "jeremy379/laravel-openid-connect",
+    "name": "1nhealth/laravel-openid-connect",
     "type": "library",
     "description": "OpenID Connect support to the PHP League's OAuth2 Server. Compatible with Laravel Passport.",
     "license": "MIT",
