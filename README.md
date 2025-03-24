@@ -14,8 +14,25 @@ It's made to support only Laravel and [Laravel Passport](https://laravel.com/doc
 * Requires PHP version `^8.2`.
 * [lcobucci/jwt](https://github.com/lcobucci/jwt) version `^4.0`.
 * [league/oauth2-server](https://github.com/thephpleague/oauth2-server) `^8.2`.
-* Laravel 10 or Laravel 11
+* Laravel 10|11|12
 * Laravel Passport installed and configured
+
+## Local Dev Setup
+
+- Clone the repository https://github.com/1nhealth/laravel-openid-connect
+- Install composer dependencies via `composer install`
+- Generate a public/private key pair to sign tokens
+
+```sh
+mkdir -m 700 -p tmp
+
+openssl genrsa -out tmp/private.key 2048
+openssl rsa -in tmp/private.key -pubout -out tmp/public.key
+
+chmod 600 tmp/private.key
+chmod 644 tmp/public.key
+```
+- Confirm all tests pass via `./vendor/bin/phpunit tests`
 
 ## Installation
 
